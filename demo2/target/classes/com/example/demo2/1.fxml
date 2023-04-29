@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="Frame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.HelloController">
+   <children>
+      <AnchorPane fx:id="buttonBracket" layoutY="33.0" prefHeight="567.0" prefWidth="170.0" style="-fx-background-color: #66666e;">
+         <children>
+            <Button fx:id="ticketButton" layoutY="18.0" mnemonicParsing="false" onAction="#pressedTicketsBtn" prefHeight="42.0" prefWidth="170.0" style="-fx-background-color: SILVER;" text="Тикеты" textFill="#141010" textOverrun="CLIP">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="chatsButton" layoutY="74.0" mnemonicParsing="false" onAction="#pressedChatsButton" prefHeight="42.0" prefWidth="170.0" style="-fx-background-color: SILVER;" text="Чаты" textFill="#170303" textOverrun="CLIP">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="clientBtn" layoutX="-1.0" layoutY="518.0" mnemonicParsing="false" onAction="#pressedClientBtn" prefHeight="42.0" prefWidth="170.0" style="-fx-background-color: SILVER;" text="Клиент" textFill="#170303" textOverrun="CLIP">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="170.0" layoutY="66.0" prefHeight="29.0" prefWidth="1030.0" />
+      <Separator layoutX="542.0" layoutY="80.0" orientation="VERTICAL" prefHeight="520.0" prefWidth="31.0" />
+      <Group layoutX="225.0" layoutY="139.0" />
+      <Group layoutX="225.0" layoutY="169.0" />
+      <Separator layoutX="170.0" layoutY="162.0" prefHeight="29.0" prefWidth="386.0" />
+      <Text layoutX="218.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фильтры" />
+      <Group layoutX="218.0" layoutY="213.0">
+         <children>
+            <ChoiceBox fx:id="choiceBox1" layoutY="20.0" prefHeight="25.0" prefWidth="282.0" style="-fx-background-color: white; -fx-border-color: black;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ChoiceBox>
+            <Text layoutX="8.0" layoutY="16.05078125" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата" />
+         </children>
+      </Group>
+      <Group layoutX="217.0" layoutY="246.0">
+         <children>
+            <ChoiceBox fx:id="choiceBox11" layoutX="1.0" layoutY="31.0" prefHeight="25.0" prefWidth="282.0" style="-fx-background-color: white; -fx-border-color: black;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ChoiceBox>
+            <Text layoutX="8.0" layoutY="27.05078125" strokeType="OUTSIDE" strokeWidth="0.0" text="Статус" />
+         </children>
+      </Group>
+      <Group layoutX="218.0" layoutY="279.0">
+         <children>
+            <ChoiceBox fx:id="choiceBox12" layoutX="1.0" layoutY="43.0" prefHeight="25.0" prefWidth="282.0" style="-fx-background-color: white; -fx-border-color: black;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ChoiceBox>
+            <Text layoutX="8.0" layoutY="41.05078125" strokeType="OUTSIDE" strokeWidth="0.0" text="Теги" />
+         </children>
+      </Group>
+      <Group layoutX="217.0" layoutY="312.0">
+         <children>
+            <ChoiceBox fx:id="choiceBox111" layoutX="1.0" layoutY="61.0" prefHeight="25.0" prefWidth="282.0" style="-fx-background-color: white; -fx-border-color: black;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ChoiceBox>
+            <Text layoutX="8.0" layoutY="58.05078125" strokeType="OUTSIDE" strokeWidth="0.0" text="Клиент" />
+         </children>
+      </Group>
+      <Group layoutX="217.0" layoutY="340.0">
+         <children>
+            <ChoiceBox fx:id="makeChoicePrior" layoutX="1.0" layoutY="85.0" prefWidth="282.0" style="-fx-background-color: white; -fx-border-color: black;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ChoiceBox>
+            <Text layoutX="8.0" layoutY="80.05078125" strokeType="OUTSIDE" strokeWidth="0.0" text="Важность" />
+         </children>
+      </Group>
+
+      <AnchorPane layoutX="564.0" layoutY="85.0" prefHeight="60.0" prefWidth="630.0" style="-fx-background-color: #e8e8e8;">
+         <children>
+            <TextField fx:id="searchTicketR" layoutX="115.0" layoutY="13.0" prefHeight="28.0" prefWidth="482.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
+            <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="575.0" layoutY="20.0">
+               <image>
+                  <Image url="@149309.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="searchButton" layoutX="570.0" layoutY="14.0" mnemonicParsing="false" onAction="#searchTheme" opacity="0.0" prefHeight="8.0" prefWidth="25.0" style="-fx-background-color: white;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Text layoutX="90.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Описание" />
+            <Text layoutX="341.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Клиент" />
+            <Text layoutX="450.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата" />
+            <Text layoutX="562.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Статус" />
+            <Text layoutX="20.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Поиск по теме:" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ticketField" layoutX="564.0" layoutY="146.0" onMouseClicked="#goToFirstChat" prefHeight="30.0" prefWidth="630.0" style="-fx-background-color: #e8e8e8;" visible="true">
+         <children>
+            <Text fx:id="ticketTheme" layoutX="40.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Не включается компьютер" visible="true" />
+            <Text fx:id="ticketUser" layoutX="341.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Галина" visible="true" />
+            <Text fx:id="ticketDate" layoutX="436.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20.04.2023" visible="true" />
+            <Text fx:id="ticketStatus" layoutX="556.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Открыто" visible="true" />
+            <Text fx:id="ticketTags" layoutX="556.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Система" visible="false" />
+            <Text fx:id="ticketPrior" layoutX="556.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" visible="false" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane fx:id="ticketField1" layoutX="564.0" layoutY="177.0" onMouseClicked="#goToSecondChat" prefHeight="30.0" prefWidth="630.0" style="-fx-background-color: #e8e8e8;" visible="false">
+         <children>
+            <Text fx:id="ticketTheme1" layoutX="40.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketUser1" layoutX="341.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketDate1" layoutX="436.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketStatus1" layoutX="556.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketTags1" layoutX="556.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketPrior1" layoutX="556.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane fx:id="ticketField11" layoutX="564.0" layoutY="208.0" onMouseClicked="#goToThirdChat" prefHeight="30.0" prefWidth="630.0" style="-fx-background-color: #e8e8e8;" visible="false">
+         <children>
+            <Text fx:id="ticketTheme11" layoutX="40.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketUser11" layoutX="341.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketDate11" layoutX="436.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketStatus11" layoutX="556.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketTags11" layoutX="556.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketPrior11" layoutX="556.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane fx:id="ticketField111" layoutX="564.0" layoutY="239.0" onMouseClicked="#goToFourthChat" prefHeight="30.0" prefWidth="630.0" style="-fx-background-color: #e8e8e8;" visible="false">
+         <children>
+            <Text fx:id="ticketTheme111" layoutX="40.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketUser111" layoutX="341.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketDate111" layoutX="436.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketStatus111" layoutX="556.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketTags111" layoutX="556.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketPrior111" layoutX="556.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane fx:id="ticketField1111" layoutX="564.0" layoutY="270.0" onMouseClicked="#goToFifthChat" prefHeight="30.0" prefWidth="630.0" style="-fx-background-color: #e8e8e8;" visible="false">
+         <children>
+            <Text fx:id="ticketTheme1111" layoutX="40.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketUser1111" layoutX="341.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketDate1111" layoutX="436.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketStatus1111" layoutX="556.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketTags1111" layoutX="556.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+            <Text fx:id="ticketPrior1111" layoutX="556.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="39.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1200.0" />
+      <Circle fill="WHITE" layoutX="29.0" layoutY="18.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="19.0" layoutY="8.0">
+         <image>
+            <Image url="@6386976.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="allButton" alignment="TOP_LEFT" graphicTextGap="0.0" layoutX="218.0" layoutY="85.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" prefHeight="29.0" prefWidth="282.0" style="-fx-background-color: white;" text="Все" textOverrun="CLIP" wrapText="true" />
+      <Text fx:id="allText" fill="RED" layoutX="486.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+      <Button fx:id="newButton1" alignment="TOP_LEFT" graphicTextGap="0.0" layoutX="218.0" layoutY="115.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" prefHeight="29.0" prefWidth="282.0" style="-fx-background-color: white;" text="Новые сообщения" textOverrun="CLIP" wrapText="true" />
+      <Text fx:id="newText" fill="RED" layoutX="486.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+      <AnchorPane layoutX="570" layoutY="330" minHeight="0.0" minWidth="0.0" prefHeight="278.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+         <children>
+            <Button fx:id="makeButton" layoutX="417.0" layoutY="215.0" mnemonicParsing="false" onAction="#makingTicket" prefHeight="27.0" prefWidth="132.0" text="Создать" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" />
+            <Group layoutX="32.0" layoutY="17.0">
+               <children>
+                  <TextField fx:id="makeName" layoutX="44.0" prefHeight="25.0" prefWidth="253.0" />
+                  <Text layoutX="13.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя" />
+               </children>
+            </Group>
+            <Group layoutX="32.0" layoutY="49.0">
+               <children>
+                  <TextField fx:id="makeTheme" layoutX="44.0" prefHeight="68.0" prefWidth="492.0" />
+                  <Text layoutX="-14.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Описание" />
+               </children>
+            </Group>
+            <Group layoutX="32.0" layoutY="125.0">
+               <children>
+                  <TextField fx:id="makeDate" layoutX="44.0" prefHeight="25.0" prefWidth="128.0" />
+                  <Text layoutX="13.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата" />
+               </children>
+            </Group>
+            <Group layoutX="32.0" layoutY="162.0">
+               <children>
+                  <TextField fx:id="makeTags" layoutX="44.0" prefHeight="43.0" prefWidth="493.0" />
+                  <Text layoutX="13.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Теги" />
+               </children>
+            </Group>
+            <Group layoutX="32.0" layoutY="213.0" />
+            <Text layoutX="13.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Приоритет" />
+            <ChoiceBox fx:id="makeChoicePrior1" layoutX="76.0" layoutY="213.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: black;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ChoiceBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="clientPnl" layoutX="170.0" layoutY="36.0" prefHeight="567.0" prefWidth="1030.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <Button fx:id="makeButton1" layoutX="449.0" layoutY="330.0" mnemonicParsing="false" onAction="#makingTicketClient" prefHeight="27.0" prefWidth="132.0" text="Создать" />
+            <Group />
+            <Group layoutX="37.0" layoutY="246.0">
+               <children>
+                  <TextField fx:id="makeTags1" layoutX="44.0" prefHeight="43.0" prefWidth="493.0" />
+                  <Text layoutX="13.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Теги" />
+               </children>
+            </Group>
+            <Group layoutX="38.0" layoutY="123.0">
+               <children>
+                  <TextField fx:id="makeName1" layoutX="44.0" prefHeight="25.0" prefWidth="253.0" />
+                  <Text layoutX="13.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя" />
+               </children>
+            </Group>
+            <Group layoutX="354.0" layoutY="123.0">
+               <children>
+                  <TextField fx:id="makeDate1" layoutX="44.0" prefHeight="25.0" prefWidth="128.0" />
+                  <Text layoutX="13.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата" />
+               </children>
+            </Group>
+            <Group layoutX="38.0" layoutY="165.0">
+               <children>
+                  <TextField fx:id="makeTheme1" layoutX="44.0" prefHeight="68.0" prefWidth="492.0" />
+                  <Text layoutX="-14.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Описание" />
+               </children>
+            </Group>
+            <Text layoutX="584.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Приоритет" />
+            <ChoiceBox fx:id="makeChoicePrior11" layoutX="647.0" layoutY="123.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: black;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ChoiceBox>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

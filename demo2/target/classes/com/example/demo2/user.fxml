@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane minHeight="0.0"
+            minWidth="0.0"
+            prefHeight="278.0"
+            prefWidth="598.0"
+            xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.demo2.user">
+   <children>
+      <Button fx:id="makeButton"
+
+              xmlns="http://javafx.com/javafx"
+              xmlns:fx="http://javafx.com/fxml"
+              layoutX="417.0"
+              layoutY="238.0"
+              mnemonicParsing="false"
+              prefHeight="27.0"
+              prefWidth="132.0"
+              text="Создать"
+              onAction="#handle"
+
+      />
+      <Group layoutX="32.0" layoutY="17.0">
+         <children>
+            <TextField fx:id="makeName" layoutX="44.0" prefHeight="25.0" prefWidth="253.0"/>
+            <Text layoutX="13.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя"/>
+         </children>
+      </Group>
+      <Group layoutX="32.0" layoutY="49.0">
+         <children>
+            <TextField fx:id="makeTheme" layoutX="44.0" prefHeight="68.0" prefWidth="492.0"/>
+            <Text layoutX="13.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Тема"/>
+         </children>
+      </Group>
+      <Group layoutX="32.0" layoutY="125.0">
+         <children>
+            <TextField fx:id="makeDate" layoutX="44.0" prefHeight="25.0" prefWidth="128.0"/>
+            <Text layoutX="13.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата"/>
+         </children>
+      </Group>
+      <Group layoutX="32.0" layoutY="162.0">
+         <children>
+            <TextField fx:id="makeTags" layoutX="44.0" prefHeight="43.0" prefWidth="493.0"/>
+            <Text layoutX="13.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Теги"/>
+         </children>
+      </Group>
+      <Group layoutX="32.0" layoutY="213.0"/>
+      <Text layoutX="13.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Приоритет"/>
+      <ChoiceBox fx:id="makeChoicePrior" layoutX="76.0" layoutY="213.0" prefWidth="150.0"/>
+   </children>
+</AnchorPane>
